@@ -1,0 +1,484 @@
+/* 
+Copyright (c) 2020 Shivam Sharma
+
+Licensed under the MIT License (the "License"); 
+you may not use this program except in compliance with the License.
+
+The above copyright notice and this permission notice shall be 
+included in all copies or substantial portions of the program.
+
+*/
+
+/* 
+This template is developed by Shivam Sharma.
+GitHub: https://github.com/Shivamdot
+Twitter: https://twitter.com/infectedNode
+Linkedin: https://www.linkedin.com/in/infectednode/ 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap');
+
+:root {
+    --primary-color: rgb(255, 255, 255);  
+    --secondary-color: rgb(22, 51, 97); 
+    --tertiary-color: rgb(105, 105, 105); 
+    --dark-color: rgb(63, 63, 63);
+    --light-color: rgb(185, 185, 185);
+    --background-color: rgb(255, 255, 255);
+
+    --font-family: 'Fira Sans', sans-serif; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: var(--font-family);
+}
+
+.header {
+    width: 100%;
+    height: 20vh;
+    font-size: 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    background-color: var(--primary-color);
+}
+
+.header .pic {
+    display: inline-block;
+    height: 100%;
+    width: 20%;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.header .pic img {
+    height: 100%;
+}
+
+.header .details {
+    display: inline-block;
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.header .details .name {
+    display: inline-block;
+    height: 100%;
+    width: 30%;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.header .details .name h2 {
+    font-size: 2rem;
+    padding: 30px 0 10px;
+    color: var(--dark-color);
+}
+
+.header .details .name p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.header .details .links {
+    display: inline-block;
+    height: 100%;
+    width: 60%;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 20px 40px;
+}
+
+.header .details .links .link {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    word-spacing: 10px;
+    color: var(--tertiary-color);
+    font-weight: 500;
+}
+
+.header .details .links .link i {
+    color: var(--tertiary-color);
+}
+
+.main {
+    width: 100%;
+    height: 80vh;
+    font-size: 0;
+}
+
+.main .left {
+    display: inline-block;
+    height: 100%;
+    width: 20%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    padding: 40px 0;
+    border-right: 1px solid var(--light-color);
+}
+
+.main .left .option {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main .left .option:hover p {
+    color: var(--dark-color);
+}
+
+.main .left .option.active {
+    background-color: var(--light-color);
+}
+
+.main .left .option.active p {
+    color: var(--dark-color);
+}
+
+.main .left .option p {
+    font-size: 1.2rem;
+    line-height: 80px;
+    color: var(--tertiary-color);
+    font-weight: 600;
+}
+
+.main .middle {
+    display: inline-block;
+    height: 100%;
+    width: 60%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+}
+
+.main .middle .views {
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+.main .middle .views::-webkit-scrollbar {
+    display: none;
+}
+
+/* 
+This template is developed by Shivam Sharma.
+GitHub: https://github.com/Shivamdot
+Twitter: https://twitter.com/infectedNode
+Linkedin: https://www.linkedin.com/in/infectednode/ 
+*/
+
+.main .middle .views .view {
+    width: 100%;
+    min-height: 100%;
+}
+
+.main .middle .views .about {
+    font-size: 0;
+    display: none;
+    height: 100%;
+    position: relative;
+}
+
+.main .middle .views .about .pic {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main .middle .views .about .pic img {
+    /* width: 100%; */
+    height: 100%;
+}
+
+.main .middle .views .about .content {
+    width: 55%;
+    box-sizing: border-box;
+    padding: 50px;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main .middle .views .about .content h3 {
+    width: 100%;
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.main .middle .views .about .content p {
+    width: 100%;
+    font-size: 1rem;
+    color: var(--tertiary-color);
+}
+
+.main .middle .views .about.active {
+    display: block;
+}
+
+.main .middle .views .resume {
+    display: none;
+    padding: 0 40px 40px;
+    box-sizing: border-box;
+}
+
+.main .middle .views .resume h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    padding-top: 40px;
+}
+
+.main .middle .views .resume .content {
+    width: 100%;
+    padding: 20px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main .middle .views .resume .content h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--tertiary-color);
+}
+
+.main .middle .views .resume .content p {
+    font-size: 1rem;
+    color: var(--tertiary-color);
+    padding: 10px 0;
+}
+
+.main .middle .views .resume.active {
+    display: block;
+}
+
+.main .middle .views .profile {
+    width: 100%;
+    display: none;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.main .middle .views .profile .records {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.main .middle .views .profile .records .record {
+    display: inline-block;
+    width: 240px;
+    height: 80px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 15px;
+}
+
+.main .middle .views .profile .records .record .count {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.main .middle .views .profile .records .record .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--tertiary-color);
+}
+
+.main .middle .views .profile h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    padding-top: 40px;
+}
+
+.main .middle .views .profile .content {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+/* 
+This template is developed by Shivam Sharma.
+GitHub: https://github.com/Shivamdot
+Twitter: https://twitter.com/infectedNode
+Linkedin: https://www.linkedin.com/in/infectednode/ 
+*/
+
+.main .middle .views .profile .content h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--tertiary-color);
+}
+
+.main .middle .views .profile .content p {
+    font-size: 1rem;
+    color: var(--tertiary-color);
+    padding: 10px 0;
+}
+
+.main .middle .views .profile.active {
+    display: block;
+}
+
+.main .middle .views .video {
+    padding: 40px;
+    display: none;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.main .middle .views .video h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.main .middle .views .video .youtube-video {
+    margin-top: 30px;
+    width: 530px;
+    height: 300px;
+
+}
+
+.main .middle .views .video.active {
+    display: block;
+}
+
+.main .middle .views .gallery {
+    display: none;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.main .middle .views .gallery h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+}
+
+.main .middle .views .gallery .img-block {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main .middle .views .gallery .img-block img {
+    width: 100%;
+}
+
+.main .middle .views .gallery.active {
+    display: block;
+}
+
+.main .middle .footer {
+    width: 100%;
+    height: 10%;
+    border-top: 1px solid var(--light-color);
+    text-align: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+}
+
+.main .middle .footer p {
+    font-size: 1rem;
+    color: var(--dark-color);
+}
+
+.main .middle .footer p a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+.main .middle .footer p a:hover {
+    text-decoration: underline;
+}
+
+/* 
+This template is developed by Shivam Sharma.
+GitHub: https://github.com/Shivamdot
+Twitter: https://twitter.com/infectedNode
+Linkedin: https://www.linkedin.com/in/infectednode/ 
+*/
+
+.main .right {
+    display: inline-block;
+    height: 100%;
+    width: 20%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-left: 1px solid var(--light-color);
+    text-align: center;
+    padding: 20px 0;
+    -ms-overflow-style: none;
+    overflow-y: scroll;
+    background-color: #fafafa;
+}
+
+.main .right::-webkit-scrollbar {
+    display: none;
+}
+
+.main .right h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.main .right .blog {
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+}
+
+.main .right .blog .date {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.main .right .blog .heading {
+    font-size: 1rem;
+    color: var(--dark-color);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.main .right .blog .content {
+    font-size: .8rem;
+    color: var(--tertiary-color);
+}
